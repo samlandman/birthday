@@ -13,8 +13,7 @@ class Birthday < Sinatra::Base
   end
   get '/birthday' do
     @name = $person.name
-    @day = $person.day
-    @month = $person.month
+    @birthday_check = $person.birthday_gone
     erb :birthday
   end
 end
